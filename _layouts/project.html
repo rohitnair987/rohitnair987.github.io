@@ -27,6 +27,9 @@ layout: compress
                         {% if post.project %}
                             <ul>
                                 <li class="wow fadeInLeft" data-wow-duration="1.5s">
+                                    {% if post.folder %}
+                                        <img style = "max-width:20%; float:right" src = "{{ site.url }}/assets/img/projects/{{ post.folder }}/icon.jpg">
+                                    {% endif %}
                                     <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                                     <p>{{ post.excerpt }}</p>
                                     <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a>
