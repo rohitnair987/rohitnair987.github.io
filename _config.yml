@@ -3,7 +3,7 @@ title:              Rohit Nair
 bio:                'Programmer and Problem Solver.'
 description:        "The Website provides a snapshot of my skills and activities."
 reading_time:       true
-words_per_minute:   200
+words_per_minute:   125
 logo:               'assets/img/profilePic.jpg'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
