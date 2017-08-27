@@ -10,23 +10,32 @@ tag:
 - HTML 
 - JavaScript
 - CSS
+- MySQL
 - ASP
-images:
-- ots_2.jpg
-- ots_3.jpg
-- ots_4.jpg
-comments    : true
+comments    : false
 ---
 
-<b>Online Test Series</b> is a project that I worked on during my undergrad.
+<b>Online Test Series</b> is a service that students can use to prepare for competitive exams such as GRE and GMAT
 
 <img src = "{{ site.url }}/assets/img/projects/testSeries/ots_2.jpg">
 
-<!-- <iframe src="https://ghbtns.com/github-btn.html?user=TaylanTatli&repo=Moon&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> -->
-
-Explain the project
+<br />
+## About the project
+<ul>
+  <li>We host practice multiple choice mock exams for CAT, GRE and GMAT</li>
+  <li>The user creates an account with his/her preferences and the service designs practice tests and mock exams for them with varying difficulty levels</li>
+  <li>We also designed a result analysis system which creates graphs, predictions, suggestions, area-wise improvement strategies and a ranking system for them to compare among their peers</li>
+</ul>
 
 <img style = "float:left" src = "{{ site.url }}/assets/img/projects/testSeries/ots_3.jpg">
 <img style = "float:right" src = "{{ site.url }}/assets/img/projects/testSeries/ots_4.jpg">
 
 <br style="clear:both" />
+<br /><br />
+
+### Team
+<ul>
+  <li>Rohit Nair</li>
+  <li>Omkar Joshi</li>
+  <li>Pradeep Raja</li>
+</ul>
