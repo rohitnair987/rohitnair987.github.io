@@ -2,8 +2,8 @@
 layout      : post
 title       : "Associate Instructor - Database Management, SQL, Web Development"
 excerpt     : "Indiana University Bloomington"
-project     : true
-folder      : bloom
+project     : false
+folder      : food-identification
 dates       : May 2016 - Current
 tag:
 - jekyll 

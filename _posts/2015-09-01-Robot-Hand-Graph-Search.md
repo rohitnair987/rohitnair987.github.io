@@ -2,7 +2,7 @@
 layout      : post
 title       : "Associate Instructor - Database Management, SQL, Web Development"
 excerpt     : "Indiana University Bloomington"
-project     : true
+project     : false
 folder      : bloom
 dates       : May 2016 - Current
 tag:

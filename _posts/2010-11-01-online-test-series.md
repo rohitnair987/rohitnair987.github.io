@@ -33,7 +33,7 @@ comments    : false
 <br style="clear:both" />
 <br /><br />
 
-### Team
+## Team
 <ul>
   <li>Rohit Nair</li>
   <li>Omkar Joshi</li>
