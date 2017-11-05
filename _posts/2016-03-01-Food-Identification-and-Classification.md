@@ -3,64 +3,48 @@ layout      : post
 title       : "Food Identification and Classification"
 excerpt     : "Indiana University Bloomington"
 project     : true
-git         : https://github.com/rohitnair987/Age-Estimation-using-Images-of-faces
+git         : https://github.com/rohitnair987/Food-Recognition
 folder      : food-identification
 startDate   : Jan 2016
 endDate     : May 2016
 tag:
-- Python
+- C
 - OpenCV
-- Machine Learning
+- Computer Vision
 comments    : false
 ---
 
-<center><img src = "{{ site.url }}/assets/img/projects/age-gender/icon.jpg"></center>
-
-Humans have the ability to automatically look at the face of the person and estimate the age. For a computer to be able to do this automatically, we require algorithms that extract appropriate features from the faces and use them to learn how they map to ages.
-
-Here's a link to the poster that we presented <a href = "{{ site.url }}/assets/img/projects/age-gender/Poster.pdf">Poster</a>
-
-* Achieved an Average Accuracy of 70%
-* Preprocessed facial images, created models from the anthropometric facial features that we extracted, and estimated age range and gender, taking into consideration variances according to race, make-up, deformities etc.
-* Neural Networks, Naive Bayes, K-Nearest Neighbors an ensemble of the 3.
-
-### Anthropometric Model:
-* Only useful to distinguish between minors and adults.
-* Sensitive to head pose
-
-### Assumptions:
-* Only frontal face images
-* Left and right mentioned throughout are from the perspective of the viewer
-
-<center><img src = "{{ site.url }}/assets/img/projects/age-gender/1.png"></center>
-
-Our primary task is to detect the points in the above screenshot. Once we do that, we need to find the 8 ratios and pass them to an SVM and classify into 2 broad age groups. 
-
-### OpenCv Haar Cascade Classifier:
-* We start off by resizing the images to make it uniform 
-* We detect faces using the classifier haarcascade_frontalface_default.xml and for each face
-* Detect eyes, nose and mouth using pre-trained classifiers.
-* We applied Canny and GFTT to each eye’s bounding box to detect left, right, top and bottom of each eye
-* However we couldn’t continue with this approach because this gave extremely noisy results. For example, it gave somewhat good results with a clean image, like below, but fails to detect one of the eyes of the old man in the section below:
+•	EigenFood
+•	HaarLike
+•	BagofWords
+•	DeepFeatures
 
 
-<center><img src = "{{ site.url }}/assets/img/projects/age-gender/2.png"></center>
+### Eigenfoods: 
+We apply the concept of EigenFaces to our food products dataset. 
+Below are the steps involved in the classifier:
+*	Normalization: subtract average vector from each image 
+*	Covariance: normalized class vector matrix * its transpose (instead of doing transpose * vector otherwise it’ll be huge  1200x1200 for image vector size of 1200)
+*	Eigendecomposition: 
+*	Using the symmetric_eigen function of CImg to calculate eigenvectors and eigenvalues from the covariance matrix. Verified eigenvectors * its transpose giving an identity matrix. Eigenvalues decrease very slowly, the last one being of the order 10-1 to 10-2 on an average, sometimes going down to 10-6
+*	Using the SVD function of CImg to calculate eigenvectors and eigenvalues from the covariance matrix. Verified eigenvectors * its transpose giving an identity matrix(missing some ones though). Eigenvalues decrease very slowly, the last one being of the order 10-1 to 10-2 on an average
+*	PCA Dimensionality Reduction: selecting k eigenvectors which have the highest eigenvalues from the previous result (we’ve used 10 eigenvectors with the top 10 highest eigenvalues)
 
-### DLib Library:
-* We get the face landmark for each face in the image (represented by the edges in the below image) which returns a set of 68 points to represent the jaw, left-eye, right-eye and other features
-* We find which point represents our desired corners which are needed to calculating the ratios. A sample of a couple of points detected are in the below image.
-* We are able to find all the points of interest and calculate the ratios (which seem approximately correct for a normal face)
+### Haar-like features.
+This method is a simplified version of the Viola Jones object detection framework.  Each image is divided up into adjacent rectangles, and the pixel values within each rectangle are summed.  Each feature is the difference in value of several of these rectangles.  The size of the rectangles, the number of rectangles used in the calculation and their relative position can vary.  Many combinations can be used together, and in our work we did experiment with different sizes and placements of these rectangles.
 
+### Bag-of-words
+This method begins with the extraction of SIFT descriptors from each image. The entire collection of SIFT vectors returned from all the test images should be submitted to a k-means clustering, the result of which will be a set of k vectors represent the center of each cluster.  The next step is for each image to assign each of its SIFT vectors to a cluster, based on the smallest calculated distance to any of the cluster centers.  The feature vector representing each image is an array of k values, the occurrence count of that images SIFT descriptors within each of the k clusters.
 
-
-### References:
-* http://dlib.net/
-* http://www1.coe.neu.edu/~yunfu/papers/pricai10_t4.pdf
-* http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=4359348
-* http://alereimondo.no-ip.org/OpenCV/34
+### Deep features
+The idea behind implementing convolutional neural networks in this way is to take a pre-trained network and use the output of one of a deep but not final layer as features for input to another classifier, we’re using the 12th layer from the OverFeat package to extract features from our images, followed by learning from our DeepFeatures class and classifying with svm.
+#### Steps in Implementation:
+*	Store folder names of all the food products in an array, which is used later to calculate the category number required to be passed to the svm classifier
+*	For each image in each food product, run overfeat and store the result in a separate file. This is the part which takes around 20 minutes
 
 
 
 ## Team
 * Rohit Nair
-* Srivatsan Iyer
+* Karthik Sreenivas
+* Scott McCaulay
