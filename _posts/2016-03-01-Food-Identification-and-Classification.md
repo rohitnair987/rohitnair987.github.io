@@ -1,6 +1,6 @@
 ---
 layout      : post
-title       : "Age Estimation using Images of faces"
+title       : "Food Identification and Classification"
 excerpt     : "Indiana University Bloomington"
 project     : true
 git         : https://github.com/rohitnair987/Age-Estimation-using-Images-of-faces

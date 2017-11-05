@@ -1,19 +1,20 @@
 ---
 layout      : post
-title       : "Food Identification and Classification"
+title       : "Optical Music Recognition"
 excerpt     : "Indiana University Bloomington"
 project     : true
 git         : https://github.com/rohitnair987/Optical-Music-Recognition
-folder      : food-identification
-dates       : May 2016 - Current
+folder      : music-recognition
+startDate   : Jan 2016
+endDate     : May 2016
 tag:
 - C++ 
 - Music
 - Conputer Vision
-comments    : true
+comments    : false
 ---
 
-<center><img src = "{{ site.url }}/assets/img/projects/jspsych/jspsych-logo.jpg"></center>
+<center><img src = "{{ site.url }}/assets/img/projects/music-recognition/music_notes.png"></center>
 
 Given an image of a musical score(pure or noisy), we identified notes and staves
 
