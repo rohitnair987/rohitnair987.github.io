@@ -3,6 +3,7 @@ layout      : post
 title       : "Image Warping and Panorama Generation"
 excerpt     : "Indiana University Bloomington"
 project     : true
+tab 		: cv			
 git         : https://github.com/rohitnair987/Image-Warping-and-Panorama-Generation
 folder      : img-warping
 startDate   : Jan 2016
