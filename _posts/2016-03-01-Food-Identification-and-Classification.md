@@ -3,6 +3,7 @@ layout      : post
 title       : "Food Identification and Classification"
 excerpt     : "Indiana University Bloomington"
 project     : true
+tab 		: cv
 git         : https://github.com/rohitnair987/Food-Recognition
 folder      : food-identification
 startDate   : Jan 2016

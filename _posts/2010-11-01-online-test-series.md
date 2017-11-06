@@ -3,7 +3,7 @@ layout      : post
 title       : "Online Test Series"
 excerpt     : "University of Mumbai, India"
 project     : true
-tab 		: se
+tab 		    : sd
 folder      : testSeries
 startDate   : May 2010
 endDate     : Nov 2010

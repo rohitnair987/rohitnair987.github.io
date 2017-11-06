@@ -3,6 +3,7 @@ layout      : post
 title       : "Robot Hand - Graph Search Algorithms"
 excerpt     : "Indiana University Bloomington"
 project     : true
+tab 		: ai
 folder      : robot-hand
 git         : https://github.com/rohitnair987/Artificial_Intelligence/blob/master/Robot_World/Robot_Block_Movement_Automation.py
 startDate   : August 2015

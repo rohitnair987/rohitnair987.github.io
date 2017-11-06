@@ -3,6 +3,7 @@ layout      : post
 title       : "Optical Music Recognition"
 excerpt     : "Indiana University Bloomington"
 project     : true
+tab 		: cv
 git         : https://github.com/rohitnair987/Optical-Music-Recognition
 folder      : music-recognition
 startDate   : Jan 2016
