@@ -28,7 +28,7 @@ layout: compress
                   <button class="tablinks" onclick="openCity(event, 'cv')">Computer Vision</button>
                   <button class="tablinks" onclick="openCity(event, 'sd')">SD</button>
                 </div>
-                <div class="post-list" id ="ai">
+                <div class="post-list" id ="ai" style ="display:none">
                     {% for post in site.posts %} 
                         {% if post.tab == "ai" %}
                             <ul>
@@ -47,7 +47,7 @@ layout: compress
                       {% endif %}
                     {% endfor %}
                 </div>
-                <div class="post-list" id ="cv">
+                <div class="post-list" id ="cv" style ="display:none">
                     {% for post in site.posts %} 
                         {% if post.tab == "cv" %}
                             <ul>
@@ -66,7 +66,7 @@ layout: compress
                       {% endif %}
                     {% endfor %}
                 </div>
-                <div class="post-list" id ="we">
+                <div class="post-list" id ="we" style ="display:block">
                     {% for post in site.posts %} 
                         {% if post.tab == "we" %}
                             <ul>
@@ -85,7 +85,7 @@ layout: compress
                       {% endif %}
                     {% endfor %}
                 </div>
-                <div class="post-list" id ="sd">
+                <div class="post-list" id ="sd" style ="display:none">
                     {% for post in site.posts %} 
                         {% if post.tab == "sd" %}
                             <ul>
