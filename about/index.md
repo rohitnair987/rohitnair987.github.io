@@ -25,9 +25,3 @@ comments: false
 
 ## Skills
 * Java, C, C++, Python, C#, MVC, Git, HTML5, JavaScript, SQL, Node.js, CSS, Jenkins.
-
-
-## Activities
-
-
-## Hobbies
