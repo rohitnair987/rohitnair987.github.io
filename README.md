@@ -1,2 +1,2 @@
-https://rohitnair987.github.io/
+http://rohitnair.org
 The Website provides a snapshot of my skills and activities.
